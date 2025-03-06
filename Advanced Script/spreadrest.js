@@ -45,3 +45,40 @@ console.log(emp5);
                 lastname:"patil"
         }
 } */
+
+
+let employees=[
+        {
+         empid:234,
+         empname:"vina",
+         empsalary:678998998
+        },
+        {
+                empid:235,
+                empname:"gopal",
+                empsalary:5600000
+        },
+        {
+                empid:236,
+                empname:"kirti",
+                empsalary:45000
+        }
+]
+
+let newobj=null;
+employees.find((emp, index)=>{
+     if(index==1)  {
+        console.log("in if");
+                console.log(emp);
+                newobj= {...emp,empsalary:6700000}; // new memory location
+              // console.log(newemp);
+               return newobj;
+     }
+     
+})
+console.log("------");
+
+console.log(newobj);
+
+console.log(employees);
+
