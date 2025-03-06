@@ -38,3 +38,33 @@ console.log("---------");
 empnames
     .map((name)=>name.toUpperCase())
     .forEach(name=>console.log(name))
+
+let mappedarr=empnames.map((name)=>name.toUpperCase());
+console.log(mappedarr);
+
+// reduce : n->1
+// sum of array elements
+let nums=[6,3,1,5,6];
+
+let sum=nums.reduce((acc,num)=>acc+num, 10);
+// initial value acc=6, num=3  9
+// acc=9, num=1   10
+//acc=10, num=5   15
+//...
+
+console.log(sum);
+
+// display names of emloyees in following format
+// VNKNAA
+
+
+let concatenation=empnames.reduce((acc,ename)=>acc+ename[0].toUpperCase(),"");
+console.log(concatenation);
+
+// initial value of acc = "" , ename=vina v V   V
+// V, N    VN
+//VN K  VNK
+//...
+
+let concatenation2=empnames.reduce((acc,ename)=>acc+"-"+ename[0].toUpperCase(),"").substring(1);
+console.log(concatenation2);
