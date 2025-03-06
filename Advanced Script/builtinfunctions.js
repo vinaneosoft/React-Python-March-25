@@ -46,13 +46,18 @@ console.log(mappedarr);
 // sum of array elements
 let nums=[6,3,1,5,6];
 
-let sum=nums.reduce((acc,num)=>acc+num, 10);
+let sum=nums.reduce((acc,num)=>acc+num);
 // initial value acc=6, num=3  9
 // acc=9, num=1   10
 //acc=10, num=5   15
 //...
-
+let summ=nums.reduce((acc,num)=>acc+num, 10);
 console.log(sum);
+// inital value acc =10, num=6 16
+//  acc=16, num=3  19
+// acc=19, num=1   20
+//acc=20, num=5   25
+//...
 
 // display names of emloyees in following format
 // VNKNAA
