@@ -46,39 +46,45 @@ console.log(emp5);
         }
 } */
 
-
 let employees=[
         {
-         empid:234,
-         empname:"vina",
-         empsalary:678998998
+                empid:234,
+                empname:"vina",
+                empsalary:23000
         },
         {
                 empid:235,
                 empname:"gopal",
-                empsalary:5600000
+                empsalary:45000
         },
         {
                 empid:236,
                 empname:"kirti",
-                empsalary:45000
+                empsalary:56000
         }
 ]
-
 let newobj=null;
-employees.find((emp, index)=>{
+employees.forEach((emp, index, arr)=>{
      if(index==1)  {
-        console.log("in if");
                 console.log(emp);
                 newobj= {...emp,empsalary:6700000}; // new memory location
-              // console.log(newemp);
-               return newobj;
+                //arr[index]=newobj;
      }
-     
 })
 console.log("------");
-
 console.log(newobj);
+console.log(employees); // object in array unaffected
 
+// make increment of 1000 in every salary of employee
+
+// changes in new array
+let mappedarray=employees.map((emp)=>{
+        return {...emp,empsalary:emp.empsalary+1000}
+});
+console.log(mappedarray);
 console.log(employees);
-
+// original array update
+for(let emp of employees){
+        emp.empsalary=emp.empsalary+1000;
+}
+console.log(employees);
