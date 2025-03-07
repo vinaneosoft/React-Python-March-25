@@ -30,3 +30,41 @@ console.log(bookId); // normal variable
 //console.log(book.bookId); // key
 
 
+let  persons=[
+    {
+        pid:676889,
+        pname:'mohan',
+        page:56
+    },
+    {
+        pid:77777,
+        pname:'soham',
+        page:45
+    }
+]
+
+let [person1, person2]=persons; // array de
+
+var {pid:id, pname:name, page:age}=person1; // with alias
+console.log(id);
+var {pid, pname, page}=person2;
+console.log(pid);
+
+empinfo=[101, 'harish kumar', 78000, 'married'];
+// store id and name in seperate variables and rest all info in another array
+// destr, rest
+
+let [idd,nname, ...arr]=empinfo;
+console.log(idd);
+console.log(nname);
+console.log(arr);
+
+/* skipping values while destructuring */
+
+let [eeid,,eesal]=empinfo;
+console.log("-------------");
+console.log(eeid);
+console.log(eesal);
+
+
+
