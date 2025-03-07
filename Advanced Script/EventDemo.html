@@ -6,12 +6,9 @@
     <title>Events</title>
 </head>
 <body>
+  
     <button onclick="showAlert()" >CLICK</button>
-
     <button id="btn2" >CLICK</button>
-
-
-
     <script>
 
         // register event in script
@@ -24,8 +21,14 @@
             window.alert("You are learning basic JS");
         }
 
+        //create element
 
+        const h1Ele=document.createElement("h1"); //HTMLHeadingElement
+        h1Ele.innerHTML="<i>JS BASICS</i>"; // i tag h1 
+        // createEleemnt  : i : textcontent
+        //h1 append i
 
+        document.body.prepend(h1Ele);
     </script>
 </body>
 </html>
