@@ -88,3 +88,33 @@ for(let emp of employees){
         emp.empsalary=emp.empsalary+1000;
 }
 console.log(employees);
+
+
+let cities=['moombai','SATARA', 'poone']; // incorrect 
+
+//let cities2 =[...cities, cities[cities.length-1]='pune'];
+//console.log(cities2);
+
+let cities3=cities.map((city)=>{
+        if(city=='poone')
+                return 'pune';
+        else
+                return city; 
+        }
+);
+console.log(cities);
+console.log(cities3);
+
+let mycities=['mumbai','pune','satara']; // correct
+
+mycities.forEach((correctcity=>{
+        let found=cities.find(city=>city.toUpperCase()==correctcity.toUpperCase())
+        if(found==undefined)
+                console.log(correctcity+" with correct spelling not found");
+        else
+                console.log(correctcity+" with correct spelling  found");
+                
+}))
+
+
+
