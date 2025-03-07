@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button onclick="showAlert()" >CLICK</button>
+
+    <button id="btn2" >CLICK</button>
+
+
+
+    <script>
+
+        // register event in script
+
+        const btnElem=document.getElementById('btn2')
+        btnElem.addEventListener("click", ()=>showAlert());
+
+        function showAlert(){
+            // javascript logic
+            window.alert("You are learning basic JS");
+        }
+
+
+
+    </script>
+</body>
+</html>
